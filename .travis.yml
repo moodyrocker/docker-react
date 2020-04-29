@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t moody1 -f Dockerfile.dev .
+  - docker build -t moody1 .
 
 script:
   - docker run -e CI=true moody1 npm run test
